@@ -1,0 +1,28 @@
+$categories: (business, entertainment, general, health, science, sports, technology);
+$categories-colors: (
+  $business-color,
+  $entertainment-color,
+  $general-color,
+  $health-color,
+  $science-color,
+  $sports-color,
+  $technology-color
+);
+
+@mixin category-labels-styles() {
+  @for $i from 1 through length($categories) {
+    &.#{nth($categories, $i)} {
+      background-color: nth($categories-colors, $i);
+      color: $white;
+      opacity: 0.7;
+    }
+  }
+}
+
+@mixin news-card-borders-styles() {
+  @for $i from 1 through length($categories) {
+    &.#{nth($categories, $i)} {
+      border-top: 4px solid nth($categories-colors, $i);
+    }
+  }
+}

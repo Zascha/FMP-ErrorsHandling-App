@@ -1,0 +1,52 @@
+{
+  "name": "w1-newsapi",
+  "version": "1.0.0",
+  "description": "New Api App",
+  "main": "app/compiled/index.js",
+  "scripts": {
+    "build-dev": "webpack --mode=development --config webpack.dev.config.js --watch",
+    "start-dev": "webpack-dev-server --mode=development --config webpack.dev.config.js --watch",
+    "build": "webpack --mode=production --config webpack.prod.config.js",
+    "start": "webpack-dev-server --mode=production --config webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zascha/FMP-NewsAPI-App.git"
+  },
+  "author": "Aliaksandra_Zakharava@epam.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zascha/FMP-NewsAPI-App/issues"
+  },
+  "homepage": "https://github.com/Zascha/FMP-NewsAPI-App#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2",
+    "webpack-mode": "^1.0.2"
+  },
+  "dependencies": {
+    "argv": "0.0.2",
+    "css-url-relative-plugin": "^1.0.0",
+    "jquery": "^3.4.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+.header {
+  background-color: $dark-grey;
+  border-top: 20px solid $black;
+  padding-bottom: 20px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 75%;
+
+    @media only screen and (max-width: $tablet-size) {
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $tablet-size) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    color: $white;
+    width: 70%;
+
+    img {
+      height: auto;
+      margin-left: -2px;
+      margin-right: 8px;
+      width: 60px;
+    }
+  }
+
+  &__filters {
+    align-items: center;
+    display: flex;
+
+    @media only screen and (max-width: $tablet-size) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__filter {
+    align-items: center;
+    background-color: $grey;
+    border-radius: 15px;
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    margin-left: 5px;
+    padding: 3px 12px;
+
+    &.selected {
+      background-color: $red;
+      color: $white;
+    }
+
+    @media only screen and (max-width: $tablet-size) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.error-filter{
+  background-color: $error-color;
+}

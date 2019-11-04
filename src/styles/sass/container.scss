@@ -1,0 +1,55 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  background-image: url("../sources/background.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: OpenSans;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding-bottom: 20px;
+  position: relative;
+  width: 100vw;
+
+  .content {
+    background-color: $light-grey;
+    border-top: 10px solid $light-grey;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px auto 0 auto;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 10px 10px 10px;
+    position: relative;
+    width: 77%;
+    z-index: 100;
+
+    @media only screen and (max-width: $tablet-size) {
+      width: 95%;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: $light-grey;
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $red;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $dark-red;
+      }
+    }
+  }
+}
